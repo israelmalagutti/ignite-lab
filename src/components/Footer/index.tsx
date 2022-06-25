@@ -4,7 +4,7 @@ import LogoRocketseat from '../LogoRocketseat';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex py-6 mx-6 mt-20 items-center justify-between text-gray-300 border-t">
+    <footer className="flex py-6 mx-6 items-center justify-between  border-t text-gray-300 bg-gray-900">
       <div className="flex gap-6 items-center">
         <LogoRocketseat />
 
