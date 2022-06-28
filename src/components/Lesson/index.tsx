@@ -19,6 +19,12 @@ const Lesson = (props: ILesson) => {
 
   const isLessonAvailable = isPast(props.availableAt);
 
+  const handleOnClick = (e: any) => {
+    if (!isLessonAvailable) {
+      e.preventDefault();
+    }
+  };
+
   const availableDateFormatted = format(
     props.availableAt,
     "EEEE' • 'd' de 'MMMM' • 'k'h'mm",
@@ -28,7 +34,13 @@ const Lesson = (props: ILesson) => {
   );
 
   return (
-    <Link to={`/event/lesson/${props.slug}`} className="group">
+    <Link
+      to={`/event/lesson/${props.slug}`}
+      className={classNames("group", {
+        "pointer-events-none": !isLessonAvailable,
+      })}
+      onClick={handleOnClick}
+    >
       <span className="text-gray-300">{availableDateFormatted}</span>
 
       <div
@@ -36,7 +48,7 @@ const Lesson = (props: ILesson) => {
           "flex flex-col mt-3 p-4 border rounded group-hover:border-green-300 transition-colors",
           {
             "bg-green-500": isActive,
-            "bg-gray-500": !isActive,
+            "bg-gray-700": !isActive,
           }
         )}
       >
