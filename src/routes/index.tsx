@@ -12,6 +12,6 @@ const Router = () => {
       <Route path="/event/lesson/:slug" element={<Event />} />
     </Routes>
   );
-}
+};
 
 export { Router };

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import LogoRocketseat from '../LogoRocketseat';
+import LogoRocketseat from "../LogoRocketseat";
 
 const Footer: React.FC = () => {
   return (
@@ -8,16 +8,12 @@ const Footer: React.FC = () => {
       <div className="flex gap-6 items-center">
         <LogoRocketseat />
 
-        <span>
-          Rocketseat - Todos os direitos reservados
-        </span>
+        <span>Rocketseat - Todos os direitos reservados</span>
       </div>
 
-      <span>
-        Políticas de privacidade
-      </span>
+      <span>Políticas de privacidade</span>
     </footer>
   );
-}
+};
 
 export { Footer };
